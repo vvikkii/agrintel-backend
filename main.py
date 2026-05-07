@@ -64,10 +64,11 @@ def predict(data: InputData):
 fertilizer_map = {
     0: "Compost",
     1: "DAP",
-    2: "Potash",
+    2: "MOP",
     3: "NPK",
-    4: "Organic",
-    5: "Urea"
+    4: "SSP",
+    5: "Urea",
+    6: "Zinc Sulphate"
 }
 
 fertilizer_name = fertilizer_map.get(int(prediction[0]), "Unknown")
