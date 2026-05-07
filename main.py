@@ -59,7 +59,7 @@ def predict(data: InputData):
         "Yield_Last_Season": data.Yield_Last_Season
     }])
 
-  prediction = model.predict(input_data)
+ prediction = model.predict(input_data)
 
 fertilizer_map = {
     0: "Compost",
