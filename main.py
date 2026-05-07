@@ -59,8 +59,19 @@ def predict(data: InputData):
         "Yield_Last_Season": data.Yield_Last_Season
     }])
 
-    prediction = model.predict(input_data)
+  prediction = model.predict(input_data)
 
-    return {
-        "recommended_fertilizer": str(prediction[0])
-    }
+fertilizer_map = {
+    0: "Compost",
+    1: "DAP",
+    2: "Potash",
+    3: "NPK",
+    4: "Organic",
+    5: "Urea"
+}
+
+fertilizer_name = fertilizer_map.get(int(prediction[0]), "Unknown")
+
+return {
+    "recommended_fertilizer": fertilizer_name
+}
